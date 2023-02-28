@@ -13,10 +13,7 @@ p{
 .title2{
     text-align: center;
 }
-pre{
-    text-align: center;
-    font-size: 20px;
-}
+
 table{
     width: 100%;
     border-collapse: collapse;
@@ -38,7 +35,14 @@ button{
   table tr th{
     font-size: 20px;
 }
-
-
+pre{
+    text-align: center;
+}
+@media only screen and (max-width: 600px){
+    .title2{
+        font-size: 20px;
+        text-align: center;
+    }
+}
 
 
