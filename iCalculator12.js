@@ -18,6 +18,9 @@ function calculateConTop(){
     else if(RS < 1 && RA < 1){
         document.getElementById("ConTopoutput").innerHTML = `Toatal: cement = ${RC.toFixed(2)}bags, sand = ${RS.toFixed(2)} sud and aggregate = ${RA.toFixed(2)} sud.`
     }
+    else if(!Ltop || !Btop || !Ntop){
+        document.getElementById("ConTopoutput").innerHTML = `Please fill all!!!`
+    }
     else{
         document.getElementById("ConTopoutput").innerHTML = `Toatal: cement = ${RC.toFixed(2)}bags, sand = ${RS.toFixed(2)} suds and aggregate = ${RA.toFixed(2)} suds.`
     }
