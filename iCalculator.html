@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-my">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="qs.jpg">
+    <title>Calculator</title>
+    <link href="stylecalculator.css" rel="stylesheet">
+    <link rel="stylesheet" href="iCalculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="navbar">
+            <ul>  <li class="li0"><a href="index.html">Home</a></li>
+              <li class="li1"><a href="iCalculator.html">Calculator</a></li>
+              <li class="li2"><a href="iPurpose.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <table>
+      <tbody>
+          <tr>
+            <th colspan="2">Rebar Weight</th>
+          </tr>
+          <tr>
+            <td>Enter the rebar diameter in mm:</td>
+            <td><input type="number"name="all" class="all" id="diameter" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the total feet of the rebar: </td>
+            <td><input type="number" name="all" class="all" id="feet" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td><button id="submitBtn" onclick="calculate()">Calculate</button></td>
+          </tr>
+          <tr>
+            <td>Result:</td>
+            <td><p id="output"><br><br></p></td>
+          </tr>
+          <tr>
+            <td><a href="RBhelp.html">Help</a></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+          <tr>
+            <th colspan="2">Hardcore Calculator</th>
+          </tr>
+          <tr>
+               <td>Type the length of footing for hardcore(L): </td>
+               <td><input type="number" name="all-hc" class="all-hc" id="hcL" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the breadth of footing for hardcore(B): </td>
+            <td><input type="number" name="all-hc" class="all-hc" id="hcB" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the height of footing for hardcore(H):</td>
+            <td><input type="number" name="all-hc" class="all-hc" id="hcH" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the total number of footings for hardcore(Nos): </td>
+            <td><input type="number" name="all-hc" class="all-hc" id="hcN" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td> <button id="submitBtn2" onclick="calculatehc()">Calculate</button></td>
+          </tr>
+          <tr>
+            <td>Result : </td>
+            <td><p id="hcoutput"><br><br></p></td>
+          </tr>
+          <tr>
+            <td><a href="HcHelp.html">Help</a></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+          <tr>
+            <th colspan="2">Lean Concrete Calaulator</th>
+          </tr>
+          <tr>
+            <td>Type the length of footing for Lean concrete(L): </td>
+            <td><input type="number" name="all-Lean" class="all-Lean" id="LeanL" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the breadth of footing for Lean concrete(B): </td>
+            <td><input type="number" name="all-Lean" class="all-Lean" id="LeanB" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the height of footing for Lean concrete(H): </td>
+            <td><input type="number" name="all-Lean" class="all-Lean" id="LeanH" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the total number of footings for Lean concrete(Nos): </td>
+            <td><input type="number" name="all-Lean" class="all-Lean" id="LeanN" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td><button id="submitBtn2" onclick="calculateLean()">Calculate</button></td>
+          </tr>
+          <tr>
+            <td>Result:</td>
+            <td><p id="Leanoutput"><br><br></p></td>
+          </tr>
+          <tr>
+            <td><a href="LeanHelp.html">Help</a></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+          <tr>
+            <th colspan="2">Wood Weight</th>
+          </tr>
+          <tr>
+            <td>Type the length of wood in feet only (L): </td>
+            <td><input type="number" name="all-wood" class="all-wood" id="woodL" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the breadth of wood in inches only (B): </td>
+            <td><input type="number" name="all-wood" class="all-wood" id="woodB" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the height of wood in inches only(H): </td>
+            <td><input type="number" name="all-wood" class="all-wood" id="woodH" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td>Type the total number of  wood(Nos): </td>
+            <td><input type="number" name="all-wood" class="all-wood" id="woodN" placeholder="Type number only..." required></td>
+          </tr>
+          <tr>
+            <td><button id="submitBtn2" onclick="calculateWood()">Calculate</button></td>
+          </tr>
+          <tr>
+            <td>Result:</td>
+            <td><p id="woodoutput"><br><br></p></td>
+          </tr>
+          <tr>
+            <td><a href="Wood.html">Help</a></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+            <tr>
+              <th colspan="2">1:2:4 Concrete Calculator</th>
+            </tr>
+              <tr>
+                <td>Type the length(L): </td>
+                <td><input type="number" id="con124L" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Type the Breadth(B): </td>
+                <td><input type="number" id="con124B" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Type the Height(H): </td>
+                <td><input type="number" id="con124H" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Total Number:</td>
+                <td><input type="number" id="con124N" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><button id="submitBtn2" onclick="calculatecon124()">Calculate</button></td>
+              </tr>
+              <tr>
+                <td>Result:</td>
+                <td><p id="con124output"><br><br></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="124con.html">Help</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr></td>
+              </tr>
+            
+              <tr>
+                <th colspan="2">Calculator for sand filling work</th>
+              </tr>
+          
+              <tr>
+                <td>Type the length(L): </td>
+                <td><input type="number" id="SandL" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Type the Breadth(B): </td>
+                <td><input type="number" id="SandB" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Type the Height(H): </td>
+                <td><input type="number" id="SandH" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Total Number:</td>
+                <td><input type="number" id="SandN" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><button id="submitBtn2" onclick="calculateSand()">Calculate</button></td>
+              </tr>
+              <tr>
+                <td>Result:</td>
+                <td><p id="Sandoutput"><br><br></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="SandFill.html">Help</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr></td>
+              </tr>
+              <tr>
+                <th colspan="2">Concrete Flooring Work Calculation</th>
+              </tr>
+          
+              <tr>
+                <td>Inner to Inner span length(L): </td>
+                <td><input type="number" id="ConFL" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Inner to Inner span length(B): </td>
+                <td><input type="number" id="ConFB" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>thickness of concrete flooring(H): </td>
+                <td><input type="number" id="ConFH" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><button id="submitBtn2" onclick="calculateConFloor()">Calculate</button></td>
+              </tr>
+              <tr>
+                <td>Result:</td>
+                <td><p id="ConFlooroutput"><br><br></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="ConFloor.html">Help</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr></td>
+              </tr>
+              <tr>
+                <th colspan="2">Concrete Topping Work Calculation for 1.5" Thickness</th>
+              </tr>
+          
+              <tr>
+                <td>type the length of topping(L): </td>
+                <td><input type="number" id="ConTopL" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>type the breadth of topping(B): </td>
+                <td><input type="number" id="ConTopB" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>type the numbers of topping(Nos): </td>
+                <td><input type="number" id="ConTopN" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><button id="submitBtn2" onclick="calculateConTop()">Calculate</button></td>
+              </tr>
+              <tr>
+                <td>Result:</td>
+                <td><p id="ConTopoutput"><br><br></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="ConTop.html">Help</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr></td>
+              </tr>
+
+
+
+
+
+              <tr>
+                <th colspan="2">Brick Calculator for the thickness of 4&frac12;" brick wall</th>
+              </tr>
+        
+              <tr>
+                <td>Type the length of brick wall(L): </td>
+                <td><input type="number" id="Brick2L" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Type the Height of brick wall(H): </td>
+                <td><input type="number" id="Brick2H" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><button id="submitBtn2" onclick="calculateBrick()">Calculate</button></td>
+              </tr>
+              <tr>
+                <td>Result:</td>
+                <td><p id="Brick2output"><br><br></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="4.5brick.html">Help</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr></td>
+              </tr>
+              <tr>
+                <th colspan="2">Brick Calculator for the thickness of 9" and above brick wall</th>
+              </tr>
+              <tr>
+                <td>Type the length of brick wall(L): </td>
+                <td><input type="number" id="BrickL" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Type the Breadth of brick wall(B): </td>
+                <td><input type="number" id="BrickB" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td>Type the Height of brick wall(H): </td>
+                <td><input type="number" id="BrickH" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><button id="submitBtn2" onclick="calculateBrick2()">Calculate</button></td>
+              </tr>
+              <tr>
+                <td>Result:</td>
+                <td><p id="Boutput"><br><br></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="9brick.html">Help</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr></td>
+              </tr>
+              <tr>
+                <th colspan="2">Calculator for Plastering with 1 : 3 Cement Mortar &frac12;" thick</th>
+              </tr>
+              <tr>
+                <td><label for="PL">Length of brick wall (L): </label></td>
+                <td><input type="number" id="PL" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><label for="side">Do you want to calculate the plastering work for 1 side or 2 side of the brick wall?</label></td>
+                <td>
+                  <select name="side" id="side">
+                    <option value="select">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="PH">Height of brick wall (H): </label></td>
+                <td><input type="number" id="PH" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><button id="submitBtn2" onclick="calculateP()">Calculate</button></td>
+              </tr>
+              <tr>
+                <td>Result:</td>
+                <td><p id="Poutput"><br><br></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="Plastering1.html">Help</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr></td>
+              </tr>
+              <tr>
+                <th colspan="2">Calculator for Plastering with 1 : 3 Cement Mortar &frac34;" thick</th>
+              </tr>
+              <tr>
+                <td><label for="PL">Length of brick wall (L): </label></td>
+                <td><input type="number" id="PL2" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><label for="side">Do you want to calculate the plastering work for 1 side or 2 side of the brick wall?</label></td>
+                <td>
+                  <select name="side" id="side2">
+                    <option value="select">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="PH">Height of brick wall (H): </label></td>
+                <td><input type="number" id="PH2" placeholder="Type number only..." required></td>
+              </tr>
+              <tr>
+                <td><button id="submitBtn2" onclick="calculateP2()">Calculate</button></td>
+              </tr>
+              <tr>
+                <td>Result:</td>
+                <td><p id="P2output"><br><br></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="Plastering2.html">Help</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="share">
+            <h2>Share this website to:</h2>
+            <div class="icons">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=[YOUR_URL]" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=[YOUR_URL]&text=This Website will help your job!" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=[YOUR_URL]&title=Awesome Website&summary=This website is helpful for site engineers&source=estimate" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="autor">Developed by Kyaw Win Maung{Dip in Construction Methodology(Civil Engineering),Ireland}</div>
+          </div>
+      
+     
+      
+    
+    <script src="index.js"></script>
+    <script src="iCalculator.js"></script>
+    <script src="iCalculator2.js"></script>
+    <script src="iCalculator3.js"></script>
+    <script src="iCalculator4.js"></script>
+    <script src="iCalculator5.js"></script>
+    <script src="iCalculator6.js"></script>
+    <script src="iCalculator7.js"></script>
+    <script src="iCalculator8.js"></script>
+    <script src="iCalculator9.js"></script>
+    <script src="iCalculator10.js"></script>
+    <script src="iCalculator11.js"></script>
+    <script src="iCalculator12.js"></script>
+</body>
+</html>
+
+
