@@ -25,14 +25,14 @@ function calculate() {
   const nos = diameterTonMap[diameter] && diameterTonMap[diameter].showNos ? feet / 39.33 : NaN;
 
   if (!isNaN(ton) && !isNaN(nos)) {
-    document.getElementById("output").innerHTML = nos.toFixed(2) + " numbers of rebars and " + ton.toFixed(2) + " in ton.";
+    document.getElementById("output").innerHTML = nos.toFixed(2) + " numbers of rebars and " + ton.toFixed(2) + " ton.";
   } 
   else if( !diameter || !feet){
     document.getElementById("output").innerHTML = "Please fill all!!!"
     return;
 }
   else if (!isNaN(ton)) {
-    document.getElementById("output").innerHTML = ton.toFixed(2) + " in ton.";
+    document.getElementById("output").innerHTML = ton.toFixed(2) + " ton.";
   } 
   else {
     document.getElementById("output").innerHTML = "Invalid diameter. Please enter a valid diameter.";
