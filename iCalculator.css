@@ -50,6 +50,7 @@ body{
 table tr th{
     column-span: 2;
     font-size: 20px;
+    
 }
 
 
@@ -64,6 +65,7 @@ table{
     table tr th{
         font-size: 30px;
     }
+    
     button{
         font-size: 15px;
     }
