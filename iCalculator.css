@@ -4,8 +4,8 @@
 }
 
 body{
-    background-color: #8f8686;
     margin: 0;
+    background-color: black;
 }
 
 .nav{
@@ -50,9 +50,12 @@ body{
 table tr th{
     column-span: 2;
     font-size: 20px;
+    color: white;
     
 }
-
+table tr td{
+    color: white;
+}
 
 table{
     border-collapse: collapse;
@@ -75,9 +78,10 @@ table{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #8f8686;
+    background-color: #000000;
     padding: 20px;
     text-align: center;
+    color: white;
   }
   
   .share h2 {
@@ -89,7 +93,7 @@ table{
     display: inline-block;
     margin: 0 10px;
     font-size: 24px;
-    color: #000000;
+    color: #ffffff;
   }
   
   .share .icons a:hover {
